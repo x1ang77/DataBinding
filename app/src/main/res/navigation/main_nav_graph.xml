@@ -10,9 +10,4 @@
         android:name="com.xiangze.databinding.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.xiangze.databinding.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
 </navigation>
