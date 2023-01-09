@@ -9,5 +9,20 @@
         android:id="@+id/homeFragment"
         android:name="com.xiangze.databinding.ui.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.xiangze.databinding.ui.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.xiangze.databinding.ui.RegisterFragment"
+        android:label="RegisterFragment" />
 </navigation>

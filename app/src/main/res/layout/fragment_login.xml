@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.xiangze.databinding.viewModel.LoginViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ui.LoginFragment">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:hint="Username"
+            android:inputType="text"
+            android:text="@={viewModel.username}" />
+        <!--        @={} two way databinding, view will reflect the updates from model,
+                    and if view gets updated which will result in model reflecting the updates from view -->
+        <!--        @{} one way databinding, data expression, view will reflect the updates from model-->
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="16dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:text="@={viewModel.password}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()-> viewModel.onLoginBtnClicked()}"
+            android:text="Login" />
+    </LinearLayout>
+</layout>
